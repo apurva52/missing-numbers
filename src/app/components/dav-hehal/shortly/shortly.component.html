@@ -1,0 +1,20 @@
+<div class="row">
+    <input type="number" class="form-control" pInput [min]="0" [max]="max" id="validationCustom03" required
+        aria-describedby="emailHelp" [(ngModel)]="inputvalue" placeholder="Enter Url">
+</div>
+<div style="
+    font-size: 15px;
+    text-align: center;">
+    <font *ngIf="submit">
+        {{inputarray[inputvalue]}} is Entered
+    </font>
+    <font *ngIf="inputvalue > inputarray.length">
+        Please Enter value less than {{inputarray.length}}
+    </font>
+</div>
+<br>
+<div style="
+    text-align: center;">
+    <button type="submit" class="btn btn-primary" style="background-color: hsl(180, 66%, 49%);"
+        (click)="Submit()">Submit</button>
+</div>
